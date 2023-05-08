@@ -113,7 +113,11 @@ function GridCardsTest({ id, name, price }) {
 
       <Flex flexDirection="row" justifyContent="center" mb={"100"}>
         <Grid
-          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+          templateColumns={{
+            base: "repeat(2, 1fr)",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(4, 1fr)",
+          }}
           gap={4}
           m={2}
         >
@@ -123,8 +127,8 @@ function GridCardsTest({ id, name, price }) {
                 overflow="hidden"
                 borderWidth="1px"
                 p={"10px"}
-                h={{ base: "300px", md: "300px" }}
-                w={{ base: "auto", md: "300px" }}
+                h={{ base: "full", md: "300px" }}
+                w={{ base: "full", md: "300px" }}
                 borderRadius="3xl"
                 boxShadow="0px 4px 4px rgba(0, 0, 0, 0.35)"
                 bg={"white"}
@@ -145,7 +149,9 @@ function GridCardsTest({ id, name, price }) {
                 <Box>
                   <Text fontWeight="bold" color="gray.600" mr={2}>
                     <Flex justifyContent={"center"}>
-                      <Text fontSize="xl">{donut.name}</Text>
+                      <Text fontSize="xl" fontFamily={"Gloria Hallelujah"}>
+                        {donut.name}
+                      </Text>
                     </Flex>
                     <Flex justifyContent={"center"}>
                       <Text fontSize="xl">${donut.price.toFixed(2)}</Text>

@@ -157,7 +157,6 @@ const CartPage: React.FC = () => {
               ))}
             </Box>
           </GridItem>
-
           <GridItem
             colSpan={{ base: 1, md: 2 }}
             mt={{ base: 6, md: 0 }}
