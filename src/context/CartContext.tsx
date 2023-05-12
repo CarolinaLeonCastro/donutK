@@ -17,11 +17,13 @@ interface Donut {
 interface CartContextProps {
   cart: Donut[];
   addToCart: (donut: Donut) => void;
+  removeFromCart: (donut: Donut) => void;
 }
 
 const CartContext = createContext<CartContextProps>({
   cart: [],
   addToCart: () => {},
+  removeFromCart: () => {},
 });
 
 export const useCart = () => useContext(CartContext);
@@ -33,8 +35,12 @@ export const CartProvider: React.FC = ({ children }) => {
     setCart((prevCart) => [...prevCart, donut]);
   };
 
+  const removeFromCart = (donut: Donut) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== donut.id));
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

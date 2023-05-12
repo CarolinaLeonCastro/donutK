@@ -63,6 +63,7 @@ function GridCardsTest({ id, name, price }) {
 
   const handleAddToCart = (donut) => {
     addToCart(donut);
+    console.log(donut); // Log the added item to the console
   };
 
   const handleNextDonuts = () => {
@@ -82,6 +83,9 @@ function GridCardsTest({ id, name, price }) {
   };
   const handleDecreaseQuantity = (donutId) => {
     decreaseCartQuantity(donutId);
+  };
+  const handleRemoveFromCart = () => {
+    removeFromCart(selectedItem);
   };
   return (
     <>
