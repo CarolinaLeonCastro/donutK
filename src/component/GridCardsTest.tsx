@@ -126,7 +126,7 @@ function GridCardsTest({ id, name, price }) {
                 overflow="hidden"
                 borderWidth="1px"
                 p={"10px"}
-                h={{ base: "300px", md: "300px" }}
+                h={{ base: "300px", md: "600px" }}
                 w={{ base: "auto", md: "auto" }}
                 borderRadius="3xl"
                 boxShadow="0px 4px 4px rgba(0, 0, 0, 0.35)"
@@ -160,26 +160,43 @@ function GridCardsTest({ id, name, price }) {
                 </Box>
 
                 <Divider />
+
                 <Flex justifyContent="center">
-                  <Flex justifyContent="center">
-                    <Box>
-                      <Button
-                        onClick={() => {
-                          increaseCartQuantity(donut.id);
-                          addToCart(donut);
-                        }}
-                        bg={"pink.300"}
-                        rounded={"full"}
-                        transition="transform 0.2s ease-out"
-                        _hover={{ bg: "cyan.100" }}
-                        //_focus={{ boxShadow: "outline" }}
-                        color={"white"}
-                      >
-                        Add to cart
-                      </Button>
-                    </Box>
-                  </Flex>
+                  <Box>
+                    <Button
+                      onClick={() => {
+                        increaseCartQuantity(donut.id);
+                        addToCart(donut);
+                      }}
+                      bg={"pink.300"}
+                      rounded={"full"}
+                      transition="transform 0.2s ease-out"
+                      _hover={{ bg: "cyan.100" }}
+                      //_focus={{ boxShadow: "outline" }}
+                      color={"white"}
+                    >
+                      Add to cart
+                    </Button>
+                  </Box>
                 </Flex>
+                <Flex justifyContent="center">
+                  <Box>
+                    <Button
+                      onClick={() => {
+                        decreaseCartQuantity(donut.id);
+                      }}
+                      bg={"pink.300"}
+                      rounded={"full"}
+                      transition="transform 0.2s ease-out"
+                      _hover={{ bg: "cyan.100" }}
+                      //_focus={{ boxShadow: "outline" }}
+                      color={"white"}
+                    >
+                      decrease
+                    </Button>
+                  </Box>
+                </Flex>
+
                 {selectedDonut === donut && (
                   <Modal
                     isOpen={selectedDonut === donut}

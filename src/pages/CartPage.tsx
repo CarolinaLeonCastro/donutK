@@ -18,6 +18,7 @@ import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 const CartPage: React.FC = () => {
   const { addToCart } = useCart();
   const { cart } = useCart();
+
   const { increaseCartQuantity, decreaseCartQuantity } = useShoppingCart();
   const taxRate = 0.1; // You can adjust the tax rate accordingly
 
@@ -25,10 +26,6 @@ const CartPage: React.FC = () => {
     (accumulator, currentItem) => accumulator + currentItem.price,
     0
   );
-
-  const taxes = subtotal * taxRate;
-  const totalAmount = subtotal + taxes;
-  console.log("cart is ", cart);
 
   const handleCheckout = async () => {
     try {
@@ -190,7 +187,7 @@ const CartPage: React.FC = () => {
               <Box fontWeight="bold" fontSize="xl" textAlign="center">
                 <Text>Total Amount:</Text>
                 <Flex justifyContent="center" fontSize="4xl">
-                  <Box>${totalAmount.toFixed(2)}</Box>
+                  <Box>${subtotal.toFixed(2)}</Box>
                 </Flex>
               </Box>
 
