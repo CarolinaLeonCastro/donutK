@@ -10,7 +10,6 @@ DonutK est une application e-commerce construite avec React, TypeScript et Chakr
 ## Fonctionnalités
 
 - Parcourez une grande variété de beignets et ajoutez-les à votre panier.
-- Filtrer les beignets par nom.
 - Recherchez des beignets spécifiques à l'aide de la barre de recherche.
 - Consultez les détails des beignets, tels que la description, le prix, etc.
 - Gérez votre panier en ajoutant, supprimant ou modifiant les quantités de beignets.
