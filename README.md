@@ -2,6 +2,8 @@
 
 DonutK est une application e-commerce construite avec React, TypeScript et Chakra UI. Elle vise à offrir aux utilisateurs une expérience d'achat fluide pour les beignets.
 
+![donutk](https://github.com/CarolinaLeonCastro/donutK/assets/102051189/e3a2773c-7572-4fdb-a9d2-f847f37bca71)
+
 
 
 ## Fonctionnalités
